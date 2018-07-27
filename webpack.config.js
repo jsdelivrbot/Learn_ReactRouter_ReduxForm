@@ -5,7 +5,8 @@ module.exports = {
     entry: './src/js/index.js',
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: 'js/bundle.js'
+        filename: 'js/bundle.js',
+        publicPath: '/'
     },
     module: {
         rules: [
@@ -26,7 +27,8 @@ module.exports = {
     ],
     devServer: {
         contentBase: "./dist",
-        compress: true
+        compress: true,
+        historyApiFallback: true
     },
     mode: "development"
 };
